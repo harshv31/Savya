@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  ::selection {
+    @apply bg-walnut text-ivory;
+  }
+
+  /* Refined, slim luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-taupe;
+    border: 3px solid #F4EFE6;
+    border-radius: 9999px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-sans text-[11px] uppercase tracking-luxe text-stone font-medium;
+  }
+
+  .container-editorial {
+    @apply mx-auto w-full max-w-editorial px-6 md:px-10 lg:px-16;
+  }
+
+  .heading-serif {
+    @apply font-serif font-light leading-[1.05] tracking-[-0.01em];
+  }
+
+  /* Underline-on-hover link used across the editorial UI */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute left-0 -bottom-0.5 h-px w-0 bg-current transition-all duration-500 ease-luxe;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  .btn-luxe {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 text-[12px] font-medium uppercase tracking-wide2 transition-all duration-500 ease-luxe;
+  }
+  .btn-solid {
+    @apply btn-luxe bg-charcoal text-ivory hover:bg-walnut;
+  }
+  .btn-outline {
+    @apply btn-luxe border border-current text-charcoal hover:bg-charcoal hover:text-ivory hover:border-charcoal;
+  }
+  .btn-ghost-light {
+    @apply btn-luxe border border-ivory/60 text-ivory hover:bg-ivory hover:text-charcoal;
+  }
+}
+
+/* Grain / paper texture overlay used on dark editorial blocks */
+.texture-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Hide horizontal scrollbar for sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
