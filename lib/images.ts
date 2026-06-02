@@ -1,11 +1,17 @@
 // Curated, verified luxury furniture & interior photography (Unsplash).
 // Centralised so imagery stays consistent across the editorial experience.
 
+// On GitHub Pages the site is served from a sub-path (/Savya). next/image does
+// not prepend basePath to unoptimised image src, so we apply it here for local
+// public files. Empty for local dev / normal builds.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export function img(id: string, w = 1600, q = 80): string {
-  // Pass through local public files (e.g. "/products/soriano/01.jpg") and any
-  // absolute URLs untouched — Next/Image handles their optimisation. Otherwise
-  // treat the value as an Unsplash photo id and build a sized URL.
-  if (id.startsWith('/') || id.startsWith('http')) return id;
+  // Absolute URLs pass through untouched.
+  if (id.startsWith('http')) return id;
+  // Local public files (e.g. "/products/sage/01.webp") get the base path.
+  if (id.startsWith('/')) return `${BASE_PATH}${id}`;
+  // Otherwise treat the value as an Unsplash photo id and build a sized URL.
   return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=${q}`;
 }
 
