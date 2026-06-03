@@ -27,50 +27,50 @@ export default function ProductHero({
         sizes="(max-width:1024px) 100vw, 50vw"
       />
 
-      {/* Editorial copy */}
-      <div className="flex items-center bg-cream px-6 py-16 md:px-12 lg:px-16 xl:px-24">
+      {/* Editorial copy — dark, for an exclusive gallery feel */}
+      <div className="texture-grain relative flex items-center bg-ebony px-6 py-20 text-ivory md:px-12 lg:px-16 xl:px-24">
         <div className="max-w-lg">
           <Reveal>
-            <p className="eyebrow text-stone">
+            <p className="eyebrow text-ivory/55">
               {collection ? collection.name : product.category}
               {product.badge ? ` · ${product.badge}` : ''}
             </p>
-            <h1 className="heading-serif mt-5 text-5xl md:text-6xl xl:text-7xl">
+            <h1 className="heading-serif mt-6 text-5xl text-ivory md:text-6xl xl:text-7xl">
               {product.name}
             </h1>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <p className="mt-7 text-base leading-relaxed text-cocoa md:text-lg">
+            <p className="mt-8 text-base font-light leading-relaxed text-ivory/70 md:text-lg">
               {product.shortDescription}
             </p>
           </Reveal>
 
           <Reveal delay={0.18}>
-            <div className="mt-8 flex items-baseline gap-3">
-              <p className="font-serif text-3xl text-walnut">
+            <div className="mt-9 flex items-baseline gap-3">
+              <p className="font-serif text-3xl text-gold">
                 {product.priceFrom && (
-                  <span className="text-base text-stone">from </span>
+                  <span className="text-base text-ivory/50">from </span>
                 )}
                 {formatPrice(product.price)}
               </p>
-              <span className="text-xs uppercase tracking-wide2 text-stone">
+              <span className="text-xs uppercase tracking-wide2 text-ivory/45">
                 {product.leadTime}
               </span>
             </div>
 
             {/* Fabric preview */}
             {product.fabrics.length > 0 && (
-              <div className="mt-6 flex items-center gap-2">
+              <div className="mt-7 flex items-center gap-2.5">
                 {product.fabrics.slice(0, 6).map((f) => (
                   <span
                     key={f.name}
                     title={f.name}
-                    className="h-5 w-5 rounded-full ring-1 ring-charcoal/15"
+                    className="h-5 w-5 rounded-full ring-1 ring-ivory/25"
                     style={{ backgroundColor: f.hex }}
                   />
                 ))}
-                <span className="ml-2 text-xs text-stone">
+                <span className="ml-2 text-xs text-ivory/45">
                   {product.fabrics.length}+ fabrics &amp; custom (COM)
                 </span>
               </div>
@@ -78,18 +78,18 @@ export default function ProductHero({
           </Reveal>
 
           <Reveal delay={0.26}>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#configure" className="btn-solid">
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+              <a href="#configure" className="btn-luxe bg-ivory text-ebony hover:bg-cream">
                 Configure &amp; Order
               </a>
-              <Link href="/consultation" className="btn-outline">
+              <Link href="/consultation" className="btn-ghost-light">
                 Book a Consultation
               </Link>
             </div>
 
             <a
               href="#configure"
-              className="mt-10 inline-flex items-center gap-2 text-[11px] uppercase tracking-luxe text-stone transition hover:text-charcoal"
+              className="mt-10 inline-flex items-center gap-2 text-[11px] uppercase tracking-luxe text-ivory/55 transition hover:text-ivory"
             >
               <ArrowDown size={14} className="animate-bounce" />
               See materials, dimensions &amp; story

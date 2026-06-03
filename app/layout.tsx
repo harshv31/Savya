@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Jost } from 'next/font/google';
+import { Marcellus, Jost } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import IntroLoader from '@/components/ui/IntroLoader';
 
-const serif = Cormorant_Garamond({
+// Marcellus — a symmetric, classical Roman serif for an exclusive, architectural feel.
+const serif = Marcellus({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: '400',
   variable: '--font-serif',
   display: 'swap',
 });
@@ -53,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body className="overflow-x-hidden">
+        <IntroLoader />
         <Navbar />
         <main>{children}</main>
         <Footer />

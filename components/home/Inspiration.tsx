@@ -15,7 +15,7 @@ const gallery = [
 
 export default function Inspiration() {
   return (
-    <section className="bg-cream py-24 md:py-32">
+    <section className="section-pad bg-cream">
       <div className="container-editorial">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">

@@ -15,7 +15,7 @@ export default function Testimonials() {
   const t = testimonials[index];
 
   return (
-    <section className="bg-ivory py-24 md:py-32">
+    <section className="section-pad bg-ivory">
       <div className="container-editorial">
         <div className="mx-auto max-w-4xl text-center">
           <p className="eyebrow">Words from Our Clients</p>

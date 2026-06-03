@@ -7,13 +7,13 @@ import Reveal from '@/components/ui/Reveal';
 
 export default function FeaturedCollections() {
   return (
-    <section className="bg-ivory py-24 md:py-32">
+    <section className="section-pad bg-ivory">
       <div className="container-editorial">
         <Reveal>
           <div className="flex flex-col items-end justify-between gap-6 md:flex-row">
             <div className="max-w-xl">
               <p className="eyebrow">Featured Collections</p>
-              <h2 className="heading-serif mt-4 text-4xl md:text-5xl">
+              <h2 className="heading-serif mt-5 text-4xl md:text-5xl lg:text-6xl">
                 Curated for every room
                 <br />
                 of a considered home
@@ -25,7 +25,7 @@ export default function FeaturedCollections() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
           {collections.map((c, i) => (
             <Reveal key={c.slug} delay={(i % 3) * 0.08}>
               <Link

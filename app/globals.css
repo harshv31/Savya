@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Marcellus', Georgia, serif;
   --font-sans: 'Jost', system-ui, sans-serif;
 }
 
@@ -31,7 +31,7 @@
     @apply bg-cream;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-taupe;
+    @apply bg-stone;
     border: 3px solid #F4EFE6;
     border-radius: 9999px;
   }
@@ -39,15 +39,23 @@
 
 @layer components {
   .eyebrow {
-    @apply font-sans text-[11px] uppercase tracking-luxe text-stone font-medium;
+    @apply font-sans text-[10.5px] uppercase tracking-luxe text-stone font-medium;
   }
 
+  /* Wider gutters + capped reading width = more breathing room */
   .container-editorial {
-    @apply mx-auto w-full max-w-editorial px-6 md:px-10 lg:px-16;
+    @apply mx-auto w-full max-w-editorial px-6 md:px-12 lg:px-20 xl:px-28;
   }
 
+  /* Generous, consistent vertical rhythm for sections */
+  .section-pad {
+    @apply py-28 md:py-36 lg:py-44;
+  }
+
+  /* Marcellus is a single, symmetric weight — let it breathe */
   .heading-serif {
-    @apply font-serif font-light leading-[1.05] tracking-[-0.01em];
+    @apply font-serif leading-[1.08] tracking-[0.005em];
+    font-weight: 400;
   }
 
   /* Underline-on-hover link used across the editorial UI */
@@ -63,17 +71,23 @@
   }
 
   .btn-luxe {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 text-[12px] font-medium uppercase tracking-wide2 transition-all duration-500 ease-luxe;
+    @apply inline-flex items-center justify-center gap-2 px-10 py-4 text-[11px] font-medium uppercase tracking-wide2 transition-all duration-500 ease-luxe;
   }
   .btn-solid {
-    @apply btn-luxe bg-charcoal text-ivory hover:bg-walnut;
+    @apply btn-luxe bg-ebony text-ivory hover:bg-walnut;
   }
   .btn-outline {
-    @apply btn-luxe border border-current text-charcoal hover:bg-charcoal hover:text-ivory hover:border-charcoal;
+    @apply btn-luxe border border-charcoal/40 text-charcoal hover:bg-ebony hover:text-ivory hover:border-ebony;
   }
   .btn-ghost-light {
-    @apply btn-luxe border border-ivory/60 text-ivory hover:bg-ivory hover:text-charcoal;
+    @apply btn-luxe border border-ivory/50 text-ivory hover:bg-ivory hover:text-ebony;
   }
+}
+
+/* Soft halftone texture for dark editorial blocks */
+.texture-grain-strong {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
 }
 
 /* Grain / paper texture overlay used on dark editorial blocks */

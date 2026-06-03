@@ -48,11 +48,11 @@ export default async function ProductPage({
   const gallery = resolveProductImages(slug, product.images);
   const related = productsByCollection(product.collection)
     .filter((p) => p.slug !== product.slug)
-    .slice(0, 4);
+    .slice(0, 3);
   // Top up related from other collections if needed
-  if (related.length < 4) {
+  if (related.length < 3) {
     for (const p of products) {
-      if (related.length >= 4) break;
+      if (related.length >= 3) break;
       if (p.slug !== product.slug && !related.includes(p)) related.push(p);
     }
   }
@@ -185,9 +185,9 @@ export default async function ProductPage({
               )}
             </div>
           </Reveal>
-          <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-12 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
-              <Reveal key={p.slug} delay={(i % 4) * 0.07}>
+              <Reveal key={p.slug} delay={(i % 3) * 0.08}>
                 <ProductCard product={p} images={resolveProductImages(p.slug, p.images)} />
               </Reveal>
             ))}

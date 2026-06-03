@@ -39,7 +39,7 @@ const columns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-ivory">
+    <footer className="bg-ebony text-ivory">
       {/* Newsletter */}
       <div className="border-b border-ivory/10">
         <div className="container-editorial grid gap-10 py-16 md:grid-cols-2 md:items-center">

@@ -57,7 +57,7 @@ export default function Navbar() {
           scrolled ? 'max-h-0 opacity-0' : 'max-h-12 opacity-100'
         }`}
       >
-        <div className="bg-charcoal text-ivory">
+        <div className="bg-ebony text-ivory">
           <p className="container-editorial py-2.5 text-center text-[10.5px] uppercase tracking-luxe">
             Complimentary design consultation &amp; white-glove delivery worldwide
           </p>

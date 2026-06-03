@@ -11,7 +11,7 @@ const pillars = [
 
 export default function BrandStory() {
   return (
-    <section className="bg-cream py-24 md:py-32">
+    <section className="section-pad bg-cream">
       <div className="container-editorial grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <div className="relative">
           <RevealImage

@@ -67,9 +67,9 @@ export default async function CollectionPage({
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-14 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((p, i) => (
-              <Reveal key={p.slug} delay={(i % 4) * 0.06}>
+              <Reveal key={p.slug} delay={(i % 3) * 0.07}>
                 <ProductCard product={p} images={resolveProductImages(p.slug, p.images)} />
               </Reveal>
             ))}

@@ -13,13 +13,12 @@ const icons = [Hammer, Gem, Ruler, Truck, ShieldCheck, Leaf];
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative bg-charcoal py-24 text-ivory md:py-32">
-      <div className="texture-grain absolute inset-0" />
+    <section className="section-pad texture-grain-strong relative bg-ebony text-ivory">
       <div className="container-editorial relative">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow text-ivory/60">The Savya Promise</p>
-            <h2 className="heading-serif mt-4 text-4xl text-ivory md:text-5xl">
+            <p className="eyebrow text-brass/80">The Savya Promise</p>
+            <h2 className="heading-serif mt-5 text-4xl text-ivory md:text-5xl lg:text-6xl">
               Why discerning homes
               <br />
               choose Savya
@@ -27,15 +26,15 @@ export default function WhyChooseUs() {
           </div>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-ivory/10 bg-ivory/10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-px overflow-hidden border border-ivory/10 bg-ivory/10 sm:grid-cols-2 lg:grid-cols-3">
           {whyChooseUs.map((item, i) => {
             const Icon = icons[i];
             return (
               <Reveal key={item.title} delay={(i % 3) * 0.08}>
-                <div className="group h-full bg-charcoal p-10 transition-colors duration-500 hover:bg-cocoa/40">
-                  <Icon size={28} strokeWidth={1.2} className="text-brass" />
-                  <h3 className="mt-6 font-serif text-2xl">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ivory/60">
+                <div className="group h-full bg-ebony p-12 transition-colors duration-500 hover:bg-espresso">
+                  <Icon size={26} strokeWidth={1.2} className="text-brass" />
+                  <h3 className="mt-7 font-serif text-2xl">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ivory/55">
                     {item.body}
                   </p>
                 </div>

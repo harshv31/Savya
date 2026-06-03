@@ -24,10 +24,10 @@ export default function ConsultationCTA() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-charcoal/60" />
+        <div className="absolute inset-0 bg-ebony/70" />
       </motion.div>
 
-      <div className="relative z-10 flex min-h-[520px] items-center py-28">
+      <div className="relative z-10 flex min-h-[560px] items-center py-32">
         <div className="container-editorial text-center text-ivory">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
