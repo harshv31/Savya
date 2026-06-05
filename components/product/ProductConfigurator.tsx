@@ -15,24 +15,20 @@ export default function ProductConfigurator({ product }: { product: Product }) {
 
   return (
     <div>
-      <p className="eyebrow text-stone">{product.category}</p>
-      <h1 className="heading-serif mt-3 text-4xl md:text-5xl">{product.name}</h1>
+      <p className="eyebrow text-stone">Configure your piece</p>
+      <h2 className="heading-serif mt-3 text-3xl md:text-4xl">{product.name}</h2>
 
       <div className="mt-4 flex items-baseline gap-3">
-        <p className="text-2xl text-cocoa">
+        <p className="font-serif text-2xl text-walnut">
           {product.priceFrom && <span className="text-base text-stone">from </span>}
           {formatPrice(product.price)}
         </p>
         <span className="text-xs text-stone">· excl. delivery</span>
       </div>
 
-      <p className="mt-6 max-w-md text-base leading-relaxed text-cocoa">
-        {product.shortDescription}
-      </p>
-
       {/* Fabric selector */}
       {hasFabric && (
-        <div className="mt-9">
+        <div className="mt-10">
           <div className="flex items-center justify-between">
             <p className="eyebrow text-charcoal">Upholstery</p>
             <p className="text-xs text-stone">{product.fabrics[fabric].name}</p>

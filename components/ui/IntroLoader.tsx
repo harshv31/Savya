@@ -19,7 +19,7 @@ export default function IntroLoader() {
     }
     sessionStorage.setItem('savya_intro', '1');
     document.body.style.overflow = 'hidden';
-    const t = setTimeout(() => setShow(false), reduce ? 600 : 2200);
+    const t = setTimeout(() => setShow(false), reduce ? 500 : 1400);
     return () => {
       clearTimeout(t);
       document.body.style.overflow = '';
@@ -38,28 +38,28 @@ export default function IntroLoader() {
           className="texture-grain-strong fixed inset-0 z-[200] flex items-center justify-center bg-ebony"
           initial={{ opacity: 1 }}
           exit={reduce ? { opacity: 0 } : { y: '-100%' }}
-          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
         >
           <div className="text-center text-ivory">
             <motion.p
               className="font-serif text-5xl tracking-[0.42em] pl-[0.42em] md:text-7xl"
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
               SAVYA
             </motion.p>
             <motion.div
               className="mx-auto mt-7 h-px bg-brass"
               initial={{ width: 0 }}
-              animate={{ width: 190 }}
-              transition={{ duration: 1.1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              animate={{ width: 180 }}
+              transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             />
             <motion.p
-              className="mt-6 text-[10px] uppercase tracking-luxe text-ivory/55"
+              className="mt-6 text-[10px] uppercase tracking-luxe text-ivory/65"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.7 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
             >
               The Design of Life
             </motion.p>

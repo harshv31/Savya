@@ -31,7 +31,7 @@ export default function ProductHero({
       <div className="texture-grain relative flex items-center bg-ebony px-6 py-20 text-ivory md:px-12 lg:px-16 xl:px-24">
         <div className="max-w-lg">
           <Reveal>
-            <p className="eyebrow text-ivory/55">
+            <p className="eyebrow text-brass/90">
               {collection ? collection.name : product.category}
               {product.badge ? ` · ${product.badge}` : ''}
             </p>
@@ -41,7 +41,7 @@ export default function ProductHero({
           </Reveal>
 
           <Reveal delay={0.1}>
-            <p className="mt-8 text-base font-light leading-relaxed text-ivory/70 md:text-lg">
+            <p className="mt-8 text-base font-light leading-relaxed text-ivory/80 md:text-lg">
               {product.shortDescription}
             </p>
           </Reveal>
@@ -50,11 +50,11 @@ export default function ProductHero({
             <div className="mt-9 flex items-baseline gap-3">
               <p className="font-serif text-3xl text-gold">
                 {product.priceFrom && (
-                  <span className="text-base text-ivory/50">from </span>
+                  <span className="text-base text-ivory/65">from </span>
                 )}
                 {formatPrice(product.price)}
               </p>
-              <span className="text-xs uppercase tracking-wide2 text-ivory/45">
+              <span className="text-xs uppercase tracking-wide2 text-ivory/60">
                 {product.leadTime}
               </span>
             </div>
@@ -66,11 +66,11 @@ export default function ProductHero({
                   <span
                     key={f.name}
                     title={f.name}
-                    className="h-5 w-5 rounded-full ring-1 ring-ivory/25"
+                    className="h-5 w-5 rounded-full ring-1 ring-ivory/30"
                     style={{ backgroundColor: f.hex }}
                   />
                 ))}
-                <span className="ml-2 text-xs text-ivory/45">
+                <span className="ml-2 text-xs text-ivory/60">
                   {product.fabrics.length}+ fabrics &amp; custom (COM)
                 </span>
               </div>
@@ -89,7 +89,7 @@ export default function ProductHero({
 
             <a
               href="#configure"
-              className="mt-10 inline-flex items-center gap-2 text-[11px] uppercase tracking-luxe text-ivory/55 transition hover:text-ivory"
+              className="mt-10 inline-flex items-center gap-2 text-[11px] uppercase tracking-luxe text-ivory/70 transition hover:text-ivory"
             >
               <ArrowDown size={14} className="animate-bounce" />
               See materials, dimensions &amp; story

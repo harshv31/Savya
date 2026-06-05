@@ -63,9 +63,10 @@ export default function Hero() {
             </motion.div>
           </motion.div>
         ))}
-        {/* Darker, more exclusive overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ebony/55 via-ebony/25 to-ebony/70" />
-        <div className="absolute inset-0 bg-ebony/15" />
+        {/* Darker, more exclusive overlay — left scrim keeps the headline legible
+            on every slide, regardless of the image behind it */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ebony/80 via-ebony/40 to-ebony/15" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ebony/40 via-transparent to-ebony/55" />
       </motion.div>
 
       {/* Headline */}

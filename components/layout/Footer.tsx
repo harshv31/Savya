@@ -28,11 +28,11 @@ const columns = [
     title: 'Client Care',
     links: [
       { label: 'Book a Consultation', href: '/consultation' },
-      { label: 'Delivery & White Glove', href: '/delivery' },
-      { label: 'Care & Repair', href: '/care' },
-      { label: 'Trade Programme', href: '/trade' },
-      { label: 'Returns', href: '/returns' },
-      { label: 'FAQ', href: '/faq' },
+      { label: 'Delivery & White Glove', href: '/info/delivery' },
+      { label: 'Care & Repair', href: '/info/care' },
+      { label: 'Trade Programme', href: '/info/trade' },
+      { label: 'Returns', href: '/info/returns' },
+      { label: 'FAQ', href: '/info/faq' },
     ],
   },
 ];
@@ -44,23 +44,23 @@ export default function Footer() {
       <div className="border-b border-ivory/10">
         <div className="container-editorial grid gap-10 py-16 md:grid-cols-2 md:items-center">
           <div>
-            <p className="eyebrow text-ivory/60">The Savya Letter</p>
+            <p className="eyebrow text-ivory/72">The Savya Letter</p>
             <h3 className="heading-serif mt-3 text-3xl md:text-4xl text-ivory">
               Considered living, delivered quietly.
             </h3>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-ivory/60">
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-ivory/72">
               New collections, atelier stories and private previews — never more
               than twice a month.
             </p>
           </div>
           <form className="flex items-end gap-4" action="#">
             <label className="flex-1">
-              <span className="eyebrow text-ivory/50">Email address</span>
+              <span className="eyebrow text-ivory/62">Email address</span>
               <input
                 type="email"
                 required
                 placeholder="you@home.com"
-                className="mt-3 w-full border-b border-ivory/30 bg-transparent pb-3 text-ivory placeholder:text-ivory/30 focus:border-ivory focus:outline-none"
+                className="mt-3 w-full border-b border-ivory/30 bg-transparent pb-3 text-ivory placeholder:text-ivory/45 focus:border-ivory focus:outline-none"
               />
             </label>
             <button type="submit" className="btn-ghost-light shrink-0">
@@ -74,7 +74,7 @@ export default function Footer() {
       <div className="container-editorial grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <span className="font-serif text-3xl tracking-[0.3em] pl-[0.3em]">SAVYA</span>
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/60">
+          <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/72">
             Handcrafted furniture and bespoke interiors for a life lived
             beautifully. Made to order by master artisans, designed to last
             generations.
@@ -100,7 +100,7 @@ export default function Footer() {
 
         {columns.map((col) => (
           <div key={col.title}>
-            <p className="eyebrow text-ivory/50">{col.title}</p>
+            <p className="eyebrow text-ivory/62">{col.title}</p>
             <ul className="mt-5 space-y-3 text-sm text-ivory/70">
               {col.links.map((l) => (
                 <li key={l.label}>
@@ -116,12 +116,12 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-ivory/10">
-        <div className="container-editorial flex flex-col items-center justify-between gap-4 py-7 text-[11px] uppercase tracking-wide2 text-ivory/40 md:flex-row">
+        <div className="container-editorial flex flex-col items-center justify-between gap-4 py-7 text-[11px] uppercase tracking-wide2 text-ivory/55 md:flex-row">
           <p>© {new Date().getFullYear()} Savya — The Design of Life. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-ivory/80">Privacy</Link>
-            <Link href="/terms" className="hover:text-ivory/80">Terms</Link>
-            <Link href="/sitemap" className="hover:text-ivory/80">Sitemap</Link>
+            <Link href="/info/privacy" className="hover:text-ivory/80">Privacy</Link>
+            <Link href="/info/terms" className="hover:text-ivory/80">Terms</Link>
+            <Link href="/info/sitemap" className="hover:text-ivory/80">Sitemap</Link>
           </div>
         </div>
       </div>

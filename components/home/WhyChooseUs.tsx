@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
                 <div className="group h-full bg-ebony p-12 transition-colors duration-500 hover:bg-espresso">
                   <Icon size={26} strokeWidth={1.2} className="text-brass" />
                   <h3 className="mt-7 font-serif text-2xl">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ivory/55">
+                  <p className="mt-3 text-sm leading-relaxed text-ivory/65">
                     {item.body}
                   </p>
                 </div>
