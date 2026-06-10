@@ -1,10 +1,10 @@
 const items = [
   'Handcrafted to Order',
-  'FSC-Certified Timber',
-  'Belgian Linen',
+  'NOIR — Arriving Autumn 2026',
   'White-Glove Delivery',
   'Bespoke Customization',
   'Lifetime Guarantee',
+  'NOIR — Arriving Autumn 2026',
   'Made by Master Artisans',
   'Sustainable Sourcing',
 ];

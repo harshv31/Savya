@@ -18,10 +18,15 @@ const furnitureLinks = [
   { label: 'Side Tables', href: '/collections/living-room' },
 ];
 
-const primaryLinks = [
+const primaryLinks: {
+  label: string;
+  href?: string;
+  mega?: string;
+  soon?: boolean;
+}[] = [
   { label: 'Collections', mega: 'collections' },
   { label: 'Furniture', mega: 'furniture' },
-  { label: 'Lighting', href: '/collections/lighting' },
+  { label: 'Noir', href: '/noir', soon: true },
   { label: 'Projects', href: '/projects' },
   { label: 'Journal', href: '/journal' },
 ];
@@ -58,9 +63,12 @@ export default function Navbar() {
         }`}
       >
         <div className="bg-ebony text-ivory">
-          <p className="container-editorial py-2.5 text-center text-[10.5px] uppercase tracking-luxe">
-            Complimentary design consultation &amp; white-glove delivery worldwide
-          </p>
+          <Link
+            href="/noir"
+            className="container-editorial block py-2.5 text-center text-[10.5px] uppercase tracking-luxe transition hover:text-brass"
+          >
+            Introducing NOIR — a new line, arriving autumn 2026 · Join the private list
+          </Link>
         </div>
       </div>
 
@@ -84,8 +92,11 @@ export default function Navbar() {
                 onMouseEnter={() => setOpenMega(item.mega ?? null)}
               >
                 {item.href ? (
-                  <Link href={item.href} className="link-underline py-2">
+                  <Link href={item.href} className="link-underline relative py-2">
                     {item.label}
+                    {item.soon && (
+                      <span className="absolute -right-2.5 top-0 h-1.5 w-1.5 rounded-full bg-brass" />
+                    )}
                   </Link>
                 ) : (
                   <button className="link-underline py-2">{item.label}</button>
@@ -265,6 +276,12 @@ export default function Navbar() {
                 ))}
               </ul>
               <ul className="mt-10 space-y-4 text-[13px] uppercase tracking-wide2 text-cocoa">
+                <li>
+                  <Link href="/noir" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
+                    Noir — New Line
+                    <span className="h-1.5 w-1.5 rounded-full bg-brass" />
+                  </Link>
+                </li>
                 <li><Link href="/projects" onClick={() => setMobileOpen(false)}>Projects</Link></li>
                 <li><Link href="/journal" onClick={() => setMobileOpen(false)}>Journal</Link></li>
                 <li><Link href="/about" onClick={() => setMobileOpen(false)}>About</Link></li>

@@ -16,6 +16,7 @@ const columns = [
   {
     title: 'The House',
     links: [
+      { label: 'NOIR — New Line', href: '/noir' },
       { label: 'About Us', href: '/about' },
       { label: 'Custom Furniture', href: '/custom' },
       { label: 'Design Services', href: '/consultation' },

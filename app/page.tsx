@@ -7,6 +7,7 @@ import Inspiration from '@/components/home/Inspiration';
 import Testimonials from '@/components/home/Testimonials';
 import ConsultationCTA from '@/components/home/ConsultationCTA';
 import Marquee from '@/components/home/Marquee';
+import NoirTeaser from '@/components/home/NoirTeaser';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <FeaturedCollections />
       <BrandStory />
       <BestSellers />
+      <NoirTeaser />
       <WhyChooseUs />
       <Inspiration />
       <Testimonials />

@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import IntroLoader from '@/components/ui/IntroLoader';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 
 // Marcellus — a symmetric, classical Roman serif for an exclusive, architectural feel.
 const serif = Marcellus({
@@ -56,6 +57,7 @@ export default function RootLayout({
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body className="overflow-x-hidden">
         <IntroLoader />
+        <ScrollProgress />
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -9,7 +9,7 @@ const gallery = [
   { id: IMAGES.insp2, span: '', label: 'Sphere marble, styled' },
   { id: IMAGES.insp3, span: '', label: 'Sage Bouclé reading corner' },
   { id: IMAGES.insp5, span: 'row-span-2', label: 'The Dune at dusk' },
-  { id: IMAGES.insp4, span: '', label: 'Apex in the corner' },
+  { id: IMAGES.insp4, span: '', label: 'Noir, glimpsed early' },
   { id: IMAGES.insp6, span: '', label: 'Serpentine, open plan' },
 ];
 
