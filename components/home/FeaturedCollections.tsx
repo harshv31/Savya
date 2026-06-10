@@ -12,7 +12,7 @@ export default function FeaturedCollections() {
         <Reveal>
           <div className="flex flex-col items-end justify-between gap-6 md:flex-row">
             <div className="max-w-xl">
-              <p className="eyebrow">Featured Collections</p>
+              <p className="eyebrow">Shop by Room</p>
               <h2 className="heading-serif mt-5 text-4xl md:text-5xl lg:text-6xl">
                 Curated for every room
                 <br />

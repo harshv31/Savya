@@ -81,7 +81,11 @@ export default async function ProductPage({
 
         {/* Main */}
         <div className="container-editorial grid gap-12 pb-20 lg:grid-cols-2 lg:gap-16">
-          <ProductGallery images={gallery} name={product.name} />
+          <ProductGallery
+            images={gallery}
+            name={product.name}
+            dimensions={product.dimensions}
+          />
           <div className="lg:sticky lg:top-24 lg:self-start">
             <ProductConfigurator product={product} />
           </div>

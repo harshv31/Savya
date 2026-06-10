@@ -30,6 +30,9 @@ export type Product = {
   badge?: string;
   bestseller?: boolean;
   newArrival?: boolean;
+  /** Catalog filter facets */
+  materialTags?: string[];
+  colorTags?: { name: string; hex: string }[];
   images: string[];
   shortDescription: string;
   story: string;
@@ -69,6 +72,15 @@ export const collections: Collection[] = [
       'Upholstered beds and bedside companions designed to soften the close of every day.',
     image: IMAGES.bedroom,
     count: 27,
+  },
+  {
+    slug: 'office',
+    name: 'Office',
+    tagline: 'Desks & quiet focus',
+    description:
+      'Considered desks, seating and storage for rooms where work is done beautifully.',
+    image: IMAGES.story,
+    count: 0,
   },
   {
     slug: 'outdoor',
@@ -125,6 +137,11 @@ export const products: Product[] = [
     priceFrom: true,
     badge: 'Signature',
     bestseller: true,
+    materialTags: ['Fabric', 'Wood'],
+    colorTags: [
+      { name: 'Sage Green', hex: '#9CA982' },
+      { name: 'Walnut', hex: '#6A5440' },
+    ],
     images: [
       '/products/sage-boucle-lounge-chair/01.webp',
       '/products/sage-boucle-lounge-chair/02.webp',
@@ -161,6 +178,11 @@ export const products: Product[] = [
     priceFrom: true,
     badge: 'Signature',
     bestseller: true,
+    materialTags: ['Fabric', 'Metal'],
+    colorTags: [
+      { name: 'Ivory', hex: '#EFE9DD' },
+      { name: 'Brushed Gold', hex: '#A98E63' },
+    ],
     images: ['/products/serpentine-boucle-sofa/01.webp'],
     shortDescription:
       'A free-flowing, curved sofa in premium ivory bouclé, floating on a brushed-gold metal base.',
@@ -196,6 +218,11 @@ export const products: Product[] = [
     price: 890,
     newArrival: true,
     badge: 'New',
+    materialTags: ['Stone', 'Metal'],
+    colorTags: [
+      { name: 'Marble White', hex: '#F0EDE6' },
+      { name: 'Brushed Gold', hex: '#A98E63' },
+    ],
     images: ['/products/sphere-marble-side-table/01.webp'],
     shortDescription:
       'A round marble-topped side table balanced on a stacked-sphere base in antique gold.',
@@ -228,6 +255,11 @@ export const products: Product[] = [
     price: 940,
     newArrival: true,
     badge: 'New',
+    materialTags: ['Wood', 'Metal'],
+    colorTags: [
+      { name: 'Honey Wood', hex: '#B07A3F' },
+      { name: 'Brushed Gold', hex: '#A98E63' },
+    ],
     images: ['/products/apex-pyramid-side-table/01.webp'],
     shortDescription:
       'A sculptural inverted-pyramid table in warm wood, cradled by a brushed-brass X-frame.',
@@ -262,6 +294,11 @@ export const products: Product[] = [
     priceFrom: true,
     badge: 'Artisan',
     bestseller: true,
+    materialTags: ['Wood'],
+    colorTags: [
+      { name: 'Ivory', hex: '#EFE9DD' },
+      { name: 'Walnut', hex: '#6A5440' },
+    ],
     images: [
       '/products/dune-two-tone-sideboard/01.webp',
       '/products/dune-two-tone-sideboard/02.webp',

@@ -64,12 +64,12 @@ export default async function CollectionPage({
               )}
             </p>
             {count > 0 && (
-              <div className="flex items-center gap-6 text-[12px] uppercase tracking-wide2 text-cocoa">
-                <button className="flex items-center gap-2 hover:text-charcoal">
-                  <SlidersHorizontal size={14} /> Filter
-                </button>
-                <button className="hover:text-charcoal">Sort: Featured</button>
-              </div>
+              <Link
+                href="/shop"
+                className="flex items-center gap-2 text-[12px] uppercase tracking-wide2 text-cocoa transition hover:text-charcoal"
+              >
+                <SlidersHorizontal size={14} /> Filter in Shop All
+              </Link>
             )}
           </div>
 

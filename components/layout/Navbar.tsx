@@ -186,6 +186,7 @@ export default function Navbar() {
                     <div className="col-span-3">
                       <p className="eyebrow mb-5">Explore</p>
                       <ul className="space-y-3 text-[13px] text-cocoa">
+                        <li><Link href="/shop" className="link-underline">Shop All Furniture</Link></li>
                         <li><Link href="/collections" className="link-underline">All Collections</Link></li>
                         <li><Link href="/new-arrivals" className="link-underline">New Arrivals</Link></li>
                         <li><Link href="/bestsellers" className="link-underline">Bestsellers</Link></li>

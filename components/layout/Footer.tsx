@@ -5,6 +5,7 @@ const columns = [
   {
     title: 'Collections',
     links: [
+      { label: 'Shop All', href: '/shop' },
       { label: 'Living Room', href: '/collections/living-room' },
       { label: 'Dining Room', href: '/collections/dining-room' },
       { label: 'Bedroom', href: '/collections/bedroom' },
